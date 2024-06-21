@@ -101,7 +101,7 @@ void rgb_led_wifi_app_started(void)
 		rgb_led_pwm_init();
 	}
 	
-	rgb_led_set_color(255,102, 255);
+	rgb_led_set_color(255,0, 0);
 }
 
 /**
@@ -114,11 +114,11 @@ void rgb_led_http_server_started(void)
 		rgb_led_pwm_init();
 	}
 	
-	rgb_led_set_color(204,255, 51);
+	rgb_led_set_color(0,255, 0);
 }
 
 /*
-*  color to indicate esp32 is connectd to access point
+*  color to indicate esp32 is connected to access point
 */
 void rgb_led_wifi_connected(void)
 {
@@ -127,7 +127,7 @@ void rgb_led_wifi_connected(void)
 		rgb_led_pwm_init();
 	}
 	
-	rgb_led_set_color(0,255, 153);
+	rgb_led_set_color(0,0, 255);
 }
 
 
