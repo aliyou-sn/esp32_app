@@ -41,5 +41,13 @@ void rgb_led_http_server_started(void);
 */
 void rgb_led_wifi_connected(void);
 
+/*
+*  color to indicate esp32 is on OTA
+*/
+void rgb_led_ota(void);
+
+void rgb_led_connecting_to_wifi(void);
+
+
 
 #endif /* MAIN_RGB_LED_H_ */

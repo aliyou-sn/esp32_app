@@ -77,7 +77,6 @@ static void rgb_led_pwm_init(void)
 /*
 * Set the RGB color
 */
-
 static void rgb_led_set_color(uint8_t red, uint8_t green, uint8_t blue)
 {
 	//Valur should be 0-255 for 8bit
@@ -117,6 +116,28 @@ void rgb_led_http_server_started(void)
 	rgb_led_set_color(0,255, 0);
 }
 
+
+/*
+*  blink color to indicate esp32 is about to connect to wifi
+*/
+void rgb_led_connecting_to_wifi(void)
+{
+	//Configure timer 0
+	ledc_timer_config_t ledc_timer = {
+		.duty_resolution = LEDC_TIMER_8_BIT,
+		.freq_hz         = 5,
+		.speed_mode      = LEDC_HIGH_SPEED_MODE,
+		.timer_num       = LEDC_TIMER_0
+		
+	};
+	ledc_timer_config(&ledc_timer);
+		
+	rgb_led_set_color(0,0, 200);
+	
+}
+
+
+
 /*
 *  color to indicate esp32 is connected to access point
 */
@@ -130,10 +151,24 @@ void rgb_led_wifi_connected(void)
 	rgb_led_set_color(0,0, 255);
 }
 
-
-
-
-
+/*
+*  color to indicate esp32 is on OTA
+*/
+void rgb_led_ota(void)
+{
+	//Configure timer 0
+	ledc_timer_config_t ledc_timer = {
+		.duty_resolution = LEDC_TIMER_8_BIT,
+		.freq_hz         = 5,
+		.speed_mode      = LEDC_HIGH_SPEED_MODE,
+		.timer_num       = LEDC_TIMER_0
+		
+	};
+	ledc_timer_config(&ledc_timer);
+		
+	rgb_led_set_color(0,200, 0);
+	
+}
 
 
 

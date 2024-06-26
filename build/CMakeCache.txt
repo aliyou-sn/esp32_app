@@ -15,7 +15,7 @@
 ########################
 
 //No help, variable specified on the command line.
-CCACHE_ENABLE:UNINITIALIZED=1
+CCACHE_ENABLE:UNINITIALIZED=0
 
 //Path to a program.
 CCACHE_FOUND:FILEPATH=CCACHE_FOUND-NOTFOUND
@@ -292,6 +292,9 @@ ENABLE_PROGRAMS:BOOL=
 //Build mbed TLS tests.
 ENABLE_TESTING:BOOL=
 
+//No help, variable specified on the command line.
+ESP_PLATFORM:UNINITIALIZED=1
+
 //Generate the auto-generated files as needed
 GEN_FILES:BOOL=
 
@@ -315,6 +318,12 @@ LINK_WITH_TRUSTED_STORAGE:BOOL=OFF
 
 //Compiler warnings treated as errors
 MBEDTLS_FATAL_WARNINGS:BOOL=ON
+
+//No help, variable specified on the command line.
+PYTHON:UNINITIALIZED=/Users/apple/.espressif/python_env/idf5.1_py3.8_env/bin/python
+
+//No help, variable specified on the command line.
+PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 
 //Allow unsafe builds. These builds ARE NOT SECURE.
 UNSAFE_BUILD:BOOL=OFF
@@ -553,7 +562,7 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.32.0 (Apple Git-132)()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Users/apple/.espressif/python_env/idf5.1_py3.8_env/bin/python3][cfound components: Interpreter ][v3.8.9()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/Users/apple/.espressif/python_env/idf5.1_py3.8_env/bin/python][cfound components: Interpreter ][v3.8.9()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //Have include stddef.h
@@ -568,9 +577,8 @@ HAVE_TIME_T_SIZE:INTERNAL=TRUE
 TIME_T_SIZE:INTERNAL=8
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-//Path to a program.
-_Python3_EXECUTABLE:INTERNAL=/Users/apple/.espressif/python_env/idf5.1_py3.8_env/bin/python3
+_Python3_EXECUTABLE:INTERNAL=/Users/apple/.espressif/python_env/idf5.1_py3.8_env/bin/python
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;8;9;32;;;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8;/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8;/Users/apple/.espressif/python_env/idf5.1_py3.8_env/lib/python3.8/site-packages;/Users/apple/.espressif/python_env/idf5.1_py3.8_env/lib/python3.8/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=a993414284456797fbbe5dd7f32d7be4
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=fe3b5c038166f41774bce7c3f116308e
 
